@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <form id="myForm">
+    <input type="hidden" name="campus" value="Wyong">
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      const data = {
+        campus: document.querySelector('input[name="campus"]').value
+      };
+
+      fetch('https://prod-03.australiasoutheast.logic.azure.com:443/workflows/80397d6289f14821be0a82e7c76ec755/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=TLEVNjOYbwaA6sNxw-U-_2h9taY_zMJlytrsfBw0QyE', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => response.json())
+      .then(data => console.log('Success:', data))
+      .catch((error) => console.error('Error:', error));
+    });
+  </script>
+</body>
+</html>
+``### Explanation
+
+1. **Form Submission**:
+   - The form submission is intercepted using JavaScript to prevent the default behavior.
+   
+2. **Create JSON Payload**:
+   - The form data is collected and converted into a JSON object.
+
+3. **Send POST Request**:
+   - The `fetch` API is used to send a `POST` request with the JSON payload to the Power Automate URL.
+
+### Testing
+
+1. **Save the HTML File**:
+   - Save the modified HTML file with UTF-8 encoding as `form.html`.
+
+2. **Open the File in a Browser**:
+   - Open the saved HTML file in your browser.
+
+3. **Submit the Form**:
+   - Click the **Submit** button to send the JSON data and trigger the Power Automate flow.
+
+This should resolve the issue and allow your flow to be triggered correctly. If you encounter any further issues, feel free to ask!
