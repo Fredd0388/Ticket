@@ -16,38 +16,38 @@
     header {
       width: 100%;
       text-align: center;
-      margin-bottom: 60px; /* Add more space below header */
+      margin-bottom: 120px; /* Double the space below header */
     }
     header img {
       width: 100%; /* Make logo responsive */
-      max-width: 300px; /* Limit max width */
+      max-width: 1200px; /* Double the max width */
     }
     form {
       background: white;
-      padding: 40px; /* Increase padding */
+      padding: 80px; /* Double the padding */
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       text-align: center;
       width: 90%; /* Adjust width for mobile */
-      max-width: 600px; /* Increase max width */
+      max-width: 1200px; /* Double the max width */
     }
     input[type="text"] {
-      width: calc(100% - 40px); /* Full width minus padding */
-      padding: 30px; /* Increase padding */
-      margin: 20px 0; /* Increase margin */
+      width: calc(100% - 80px); /* Full width minus padding */
+      padding: 60px; /* Double the padding */
+      margin: 40px 0; /* Double the margin */
       border: 1px solid #ccc;
       border-radius: 5px;
-      font-size: 24px; /* Increase font size */
+      font-size: 48px; /* Double the font size */
       box-sizing: border-box; /* Include padding and border in element's total width and height */
     }
     input[type="submit"] {
-      padding: 20px 30px; /* Increase padding */
+      padding: 40px 60px; /* Double the padding */
       background-color: #007BFF;
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      font-size: 24px; /* Increase font size */
+      font-size: 48px; /* Double the font size */
     }
     input[type="submit"]:hover {
       background-color: #0056b3;
@@ -61,7 +61,7 @@
   <form id="myForm">
     <input type="hidden" name="campus" value="Wyong">
     <input type="hidden" name="status" value="Next">
-    <label for="custName">Please Enter First Name:</label>
+    <label for="custName" style="font-size: 48px;">Please Enter First Name:</label> <!-- Double the font size -->
     <input type="text" id="custName" name="custName" required>
     <input type="submit" value="Submit">
   </form>
@@ -107,3 +107,4 @@
   </script>
 </body>
 </html>
+
