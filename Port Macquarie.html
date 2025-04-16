@@ -1,89 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Submit Form</title>
+  <title>Tafequeue</title>
   <style>
     body {
-      background-color: rgba(178, 219, 255, 0.8); /* #B2DBFF with 80% transparency */
+      background: url('ticketsubmit2.png') no-repeat center center fixed; /* Set background image */
+      background-size: cover; /* Cover the entire background */
       display: flex;
-      flex-direction: column; /* Arrange items in a column */
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
       font-family: Arial, sans-serif;
     }
-    header {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 120px; /* Double the space below header */
-    }
-    header img {
-      width: 100%; /* Make logo responsive */
-      max-width: 1200px; /* Double the max width */
-    }
     form {
-      background: white;
-      padding: 80px; /* Double the padding */
+      background: #DCEAF7; /* Solid background color */
+      padding: 5%; /* Use percentage for padding */
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       text-align: center;
       width: 90%; /* Adjust width for mobile */
-      max-width: 1200px; /* Double the max width */
+      max-width: 600px; /* Set a max width */
     }
     input[type="text"] {
-      width: calc(100% - 80px); /* Full width minus padding */
-      padding: 60px; /* Double the padding */
-      margin: 40px 0; /* Double the margin */
+      width: calc(100% - 20px); /* Full width minus padding */
+      padding: 20px; /* Increase padding */
+      margin: 20px 0; /* Adjust margin */
       border: 1px solid #ccc;
       border-radius: 5px;
-      font-size: 48px; /* Double the font size */
+      font-size: 1.5em; /* Increase font size */
+      font-weight: bold; /* Make font bold */
       box-sizing: border-box; /* Include padding and border in element's total width and height */
     }
     input[type="submit"] {
-      padding: 40px 60px; /* Double the padding */
+      padding: 15px 30px; /* Adjust padding */
       background-color: #007BFF;
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      font-size: 48px; /* Double the font size */
+      font-size: 1.5em; /* Increase font size */
+      font-weight: bold; /* Make font bold */
     }
     input[type="submit"]:hover {
       background-color: #0056b3;
     }
-
+    iframe {
+      background: #DCEAF7; /* Solid background color */
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 90%; /* Adjust width for mobile */
+      max-width: 600px; /* Set a max width */
+      height: 80vh; /* Set height */
+    }
     /* Media queries for responsive design */
     @media (max-width: 600px) {
-      form {
-        padding: 40px; /* Adjust padding for mobile */
+      form, iframe {
+        padding: 20px; /* Adjust padding for mobile */
         max-width: 100%; /* Full width for mobile */
       }
       input[type="text"] {
-        padding: 30px; /* Adjust padding for mobile */
-        font-size: 36px; /* Larger font size for mobile */
+        padding: 15px; /* Adjust padding for mobile */
+        font-size: 1.2em; /* Adjust font size for mobile */
       }
       input[type="submit"] {
-        padding: 30px 40px; /* Adjust padding for mobile */
-        font-size: 36px; /* Larger font size for mobile */
+        padding: 15px 20px; /* Adjust padding for mobile */
+        font-size: 1.2em; /* Adjust font size for mobile */
       }
       label {
-        font-size: 36px; /* Larger font size for mobile */
+        font-size: 1.2em; /* Adjust font size for mobile */
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logos/TAFE_NSW_endorsed_coupled_logo_SC_RGB.jpg" alt="TAFE NSW Logo"> <!-- Corrected logo path -->
-  </header>
   <form id="myForm">
-    <input type="hidden" name="campus" value="Wyong">
+    <input type="hidden" name="campus" value="Port Macquarie">
     <input type="hidden" name="status" value="Next">
-    <label for="custName" style="font-size: 48px;">Please Enter First Name:</label> <!-- Double the font size -->
+    <label for="custName" style="font-size: 1.5em; font-weight: bold;">Please Enter First Name:</label>
     <input type="text" id="custName" name="custName" required>
     <input type="submit" value="Submit">
   </form>
+
+  <iframe src="https://fredd0388.github.io/Ticket/Wyong6.html" title="Tafequeue"></iframe>
 
   <script>
     document.getElementById('myForm').addEventListener('submit', function(event) {
@@ -126,4 +127,3 @@
   </script>
 </body>
 </html>
-
