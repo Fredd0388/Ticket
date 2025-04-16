@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Submit Form</title>
+  <title>Tafequeue</title>
   <style>
     body {
       background: url('ticketsubmit2.png') no-repeat center center fixed; /* Set background image */
@@ -46,10 +46,18 @@
     input[type="submit"]:hover {
       background-color: #0056b3;
     }
-
+    iframe {
+      background: #DCEAF7; /* Solid background color */
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 90%; /* Adjust width for mobile */
+      max-width: 600px; /* Set a max width */
+      height: 80vh; /* Set height */
+    }
     /* Media queries for responsive design */
     @media (max-width: 600px) {
-      form {
+      form, iframe {
         padding: 20px; /* Adjust padding for mobile */
         max-width: 100%; /* Full width for mobile */
       }
@@ -75,6 +83,8 @@
     <input type="text" id="custName" name="custName" required>
     <input type="submit" value="Submit">
   </form>
+
+  <iframe src="https://fredd0388.github.io/Ticket/Wyong6.html" title="Tafequeue"></iframe>
 
   <script>
     document.getElementById('myForm').addEventListener('submit', function(event) {
